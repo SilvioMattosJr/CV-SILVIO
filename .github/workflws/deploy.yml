@@ -1,0 +1,47 @@
+# .github/workflows/deploy.yml
+
+# Nome do workflow
+name: Deploy to GitHub Pages
+
+# Disparo: Roda este workflow em todo push para a branch 'main'
+on:
+  push:
+    branches:
+      - main
+
+# Permissões para o workflow
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Jobs a serem executados
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Baixa o código do repositório
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Configura a versão do Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # 3. Instala as dependências
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Constrói a aplicação
+      - name: Build
+        run: npm run build
+
+      # 5. Publica no GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
