@@ -1,0 +1,781 @@
+/* src/styles/global.css */
+
+@import url('link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+/* Reset de estilos básicos */
+body {
+  margin: 0;
+  font-family: "Bellefair", serif;
+  background-color: #f4f4f9;
+  background-image: var(--bg-color);
+  color: #333;
+}
+
+
+/* Container principal do CV */
+.cv-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  padding-top: 5rem; /* Espaço para a navegação flutuante */
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Estilos do Header */
+.cv-header {
+  text-align: center;
+  border-bottom: 2px solid var(--bg-color);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cv-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.contact-info {
+  margin-top: 1rem;
+}
+
+.contact-info p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.contact-info a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.resumo-section {
+  margin-bottom: center;
+}
+
+.resumo-section p {
+  border: 2px solid var(--border-back);
+  background-color: var(--container-bg);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  padding: 1rem;
+  border-radius: 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--bg-color);
+  text-align: center;
+}
+
+.experiencia-section {
+  margin-bottom: 2rem;
+}
+
+.experiencia-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experiencia-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--bg-color)
+}
+
+.experiencia-header h4 {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.experiencia-header .periodo {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+.experiencia-item ul {
+  list-style-type: '✓ ';
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.experiencia-item li {
+  margin-bottom: 0.5rem;
+}
+
+.formacao-section {
+  margin-bottom: 2rem;
+}
+
+.formacao-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formacao-item {
+  border: 2px solid var(--border-back);
+  background-color: var(--container-bg);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  padding: 1rem;
+  border-radius: 20px;
+  color: var(--text-color);
+  padding-left: 1.5rem;
+}
+
+.formacao-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.formacao-header h4 {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.formacao-header .periodo {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+.formacao-item ul {
+  list-style-type: '✓ ';
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.formacao-item li {
+  margin-bottom: 0.5rem;
+}
+
+.habilidades-section {
+  margin-bottom: 2rem;
+}
+
+.habilidades-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.habilidade-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.habilidade-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--bg-color);
+}
+
+.certificacao-section {
+  margin-bottom: 2rem;
+}
+
+.certificacao-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.certificacao-item {
+  border: 2px solid var(--border-back);
+  background-color: var(--container-bg);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  padding: 1rem;
+  border-radius: 20px;
+  color: var(--text-color);
+  padding-left: 1.5rem;
+}
+
+.certificacao-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.certificacao-header h4 {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.certificacao-header .status {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+.certificacao-item ul {
+  list-style-type: '✓ ';
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ===================================================================
+   TEMA E BOTÃO DE TEMA (CORRIGIDO)
+====================================================================*/
+
+/* === VARIÁVEIS DE COR DO TEMA === */
+:root {
+  --bg-color: #282828;
+  --container-bg: #bcbcbc;
+  --container-bg1: #bcbcbc75;
+  --text-color: #333;
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --border-color: #eee;
+  --item-bg: #ffffff33;
+  --item-border: #e9ecef;
+  --border-border: #282828;
+  --border-back: #93928e;
+  --border-in: rgba(0, 0, 0, 0.2);
+  --font-bg: #282828;
+  --line: #ffffff33;
+}
+
+/* << CORREÇÃO PRINCIPAL: Troque 'body:has(.dark-theme)' por 'body.dark-theme' >> */
+body.dark-theme {
+  --bg-color: #bcbcbc;
+  --container-bg: #282828;
+  --container-bg1:rgba(40, 40, 40, 0.815);
+  --text-color: #e0e0e0;
+  --primary-color: #ecf0f1;
+  --secondary-color: #bdc3c7;
+  --accent-color: #3498db;
+  --border-color: #444;
+  --item-bg: #2d2d2d2f;
+  --item-border: #555;
+  --border-border: #bcbcbc;
+  --border-back: #44433f;
+  --border-in: rgba(255, 255, 255, 0.2);
+  --font-bg: #bcbcbc;
+  --line: #44433f;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.cv-container {
+  background-color: var(--container-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 6px solid var(--border-back);
+  color: var(--text-color);
+}
+
+.cv-header h1 { color: var(--font-bg); }
+.cv-header h2 { color: var(--font-bg); }
+.resumo-section h2,
+.experiencia-section h2,
+.formacao-section h2,
+.habilidades-section h2,
+.certificacoes-section h2 {
+  color: var(--font-bg);
+  padding: 0.5rem 0.6rem;
+  border-radius: 50px;
+  border: 4px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  width: fit-content; /* Largura se ajusta ao conteúdo */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.experiencia-item {
+  border-left-color: var(--bg-color);
+  border: 2px solid var(--border-back);
+  background-color: var(--container-bg);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  padding: 1rem;
+  border-radius: 20px;
+  color: var(--text-color);
+}
+.experiencia-header h3 { color: var(--bg-color); }
+.formacao-header h3 { color: var(--bg-color); }
+.habilidade-item {
+  border: 2px solid var(--border-back);
+  background-color: var(--container-bg);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  padding: 1rem;
+  border-radius: 20px;
+  color: var(--text-color);
+}
+.habilidade-item h3 { color: var(--bg-color); }
+
+/* --- BOTÃO DE TEMA (COM CLASSE ESPECÍFICA) --- */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 9px;
+  right: 0.6rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: var(--container-bg);
+  border: 5px solid var(--border-back);
+  outline: 5px solid var(--container-bg);
+  outline-offset: 0px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ===================================================================
+   NOVOS ESTILOS PARA A NAVEGAÇÃO E TRANSIÇÕES (MELHORADOS)
+====================================================================*/
+
+/* --- Container da Navegação (FLUTUANTE E COM BORDA CORRIGIDA) --- */
+.main-navigation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1px; /* << MELHORIA: Ajuste este valor para subir/descer */
+  z-index: 10;
+
+  padding: 0.5rem 0.6rem;
+  border-radius: 50px;
+  background: var(--container-bg);
+  border: 7px solid var(--border-back);
+  outline: 5px solid var(--border-border);
+  outline-offset: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* --- Botão de Navegação (Estado Base) --- */
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--border-back);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-in);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 1.0s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- Texto do Botão (Escondido por padrão) --- */
+.nav-btn span {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0;
+  max-width: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+/* --- Botão de Navegação (Estado ATIVO) --- */
+.nav-btn.nav-btn-active {
+  width: auto;
+  border-radius: 25px;
+  background: var(--border-back);
+  transform: scale(1.05);
+}
+
+/* --- Texto do Botão (Aparece no Estado ATIVO) --- */
+.nav-btn.nav-btn-active span {
+  opacity: 1;
+  max-width: 120px;
+  margin-left: 10px;
+}
+
+/* --- Área de Conteúdo e Transição Suave (MAIS LENTA) --- */
+.content-area {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.content-wrapper {
+  /* << MELHORIA: Animação mais lenta */
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animated-background {
+  position: fixed;        /* Fixa o elemento na janela */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* Largura total da viewport */
+  height: 100vh;         /* Altura total da viewport */
+  z-index: -1;           /* << A CHAVE: Manda para TRÁS de tudo */
+}
+.linkedin-link {
+  color: var(--bg-color)!important;
+  font-weight: bold; /* Opcional: deixa o texto em negrito */
+}
+
+.linkedin-link:hover {
+  text-decoration: underline;
+}
+.sobre-mim-item {
+  border: 2px solid var(--border-back);
+  background-color: var(--container-bg);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  padding: 1rem;
+  border-radius: 20px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.sobre-mim-content {
+  margin-top: 1rem;
+}
+.sobre-mim-text h2 {
+  color: var(--bg-color);
+  margin-bottom: 1rem;
+}
+.sobre-mim-text p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--bg-color);
+}
+.sobre-mim-foto img {
+  width: 150px;
+  height: 200px;
+  border-radius: 13%;
+  object-position: top;
+  border: 2px solid var(--border-back);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  border-radius: 20px;
+}
+.sobre-mim-foto img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+/* Em src/styles/global.css */
+
+/* --- Estilos da Seção Portfólio (COM ANIMAÇÃO DE ESCADA) --- */
+.portfolio-section {
+  margin-bottom: 2rem;
+}
+
+.portfolio-section h2 {
+  color: var(--bg-color);
+  border: 1px solid var(--bg-color);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  border-radius: 12px;
+  padding: 0.5rem 0.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content; /* Largura se ajusta ao conteúdo */
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  perspective: 1000px; 
+}
+
+.project-title {
+  position: absolute;
+  border: 1px solid var(--bg-color);
+  border-left: 4px solid var(--bg-color);
+  border-right: 4px solid var(--bg-color);
+  border-radius: 6px;
+  padding: 0.09rem 0.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content;
+  top: -19px;
+  left: 35.6%;
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Card Principal - Reação ao Hover */
+.main-card {
+  position: relative;
+  border: 4px solid var(--bg-color); 
+  width: 240px;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 10;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.main-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: justify;
+}
+
+/* Estilo Base para Cards Secundários */
+.secondary-card {
+  position: absolute;
+  background: var(--border-back);
+  border: 2px solid var(--bg-color);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px var(--border-back);
+  /* << MELHORIA: Transição suave e única para todos os cards secundários >> */
+  -webkit-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  color: var(--bg-color);
+  z-index: 5;
+}
+
+.project-container:hover .secondary-card.visible {
+  opacity: 1;
+}
+
+/* Card de Informações (Esquerda) - Desliza da Direita para a Esquerda */
+.info-card {
+  width: 212px;
+  height: 255px;
+  /* POSIÇÃO INICIAL: Centralizado atrás do card principal */
+  top: 66.5%;
+  left: 49%;
+  text-align: justify;
+  transform: translate(-50%, -50%) scale(1);
+}
+/* POSIÇÃO FINAL: Desliza para a esquerda */
+.project-container:hover .info-card.visible {
+  transform: translate(-141%, -50%) scale(1);
+}
+
+.info-card .tech-icons { /* ... */ }
+.info-card p { /* ... */ }
+.info-card .project-links { /* ... */ }
+.info-card .project-links a { /* ... */ }
+.info-card .project-links a:hover { /* ... */ }
+
+
+/* --- CARDS MENORES (ESCADA NA PARTE INFERIOR DIREITA) --- */
+.image-card {
+  width: 100px;
+  height: 35px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 120%;
+  height: 200%;
+  object-fit: cover; 
+  transition: transform 0.3s ease;
+}
+/* Card de Imagem 1 (o mais de baixo na escada) */
+.image-card-1 {
+  /* POSIÇÃO INICIAL: Centralizado atrás do card principal */
+  bottom: 74%;
+  right: 34%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+/* POSIÇÃO FINAL: Desliza para a direita e para baixo */
+.project-container:hover .image-card-1.visible {
+  bottom: 82%;  /* << AJUSTE AQUI para a altura da escada */
+  right: 28%;  /* << AJUSTE AQUI para a distância da direita */
+  transform: translate(50%, 50%) scale(1);
+}
+
+/* Card de Imagem 2 (o do meio) */
+.image-card-2 {
+  /* POSIÇÃO INICIAL: Centralizado */
+  bottom: 58%;
+  right: 34%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+/* POSIÇÃO FINAL: Desliza para a direita e para baixo (mais que o 1) */
+.project-container:hover .image-card-2.visible {
+  bottom: 66%;   /* << AJUSTE AQUI */
+  right: 28%;  /* << AJUSTE AQUI */
+  transform: translate(50%, 50%) scale(1);
+}
+
+/* Card de Imagem 3 (o mais de cima na escada) */
+.image-card-3 {
+  /* POSIÇÃO INICIAL: Centralizado */
+  bottom: 42%;
+  right: 34%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+/* POSIÇÃO FINAL: Desliza para a direita e para baixo (mais que o 2) */
+.project-container:hover .image-card-3.visible {
+  bottom: 49.7%;  /* << AJUSTE AQUI */
+  right: 28%; /* << AJUSTE AQUI */
+  transform: translate(50%, 50%) scale(1);
+}
+.image-card-4 {
+  /* POSIÇÃO INICIAL: Centralizado */
+  bottom: 26%;
+  right: 34%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+/* POSIÇÃO FINAL: Desliza para a direita e para baixo (mais que o 2) */
+.project-container:hover .image-card-4.visible {
+  bottom: 33.6%;  /* << AJUSTE AQUI */
+  right: 28%; /* << AJUSTE AQUI */
+  transform: translate(50%, 50%) scale(1);
+}
+.image-card-5 {
+  /* POSIÇÃO INICIAL: Centralizado */
+  bottom: 10%;
+  right: 34%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+/* POSIÇÃO FINAL: Desliza para a direita e para baixo (mais que o 2) */
+.project-container:hover .image-card-5.visible {
+  bottom: 17.5%;  /* << AJUSTE AQUI */
+  right: 28%; /* << AJUSTE AQUI */
+  transform: translate(50%, 50%) scale(1);
+}
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+  .main-card { width: 350px; height: 220px; }
+  .info-card { width: 280px; height: 320px; }
+  .image-card { width: 80px; height: 80px; }
+}
+.tech-card {
+  width: 100px;
+  height: 55px; /* Altura automática para se ajustar ao conteúdo */
+  padding: 1rem 1.5rem;
+  /* POSIÇÃO FINAL: Acima do card de informações */
+  top: 20%;
+  left: 43%;
+  transform: translate(-50%, -50%) scale(1);
+  
+  /* ESTADO INICIAL: "dentro da gaveta" (escondido à esquerda) */
+  transform: translate(-50%, -50%) scale(1);
+}
+/* ESTADO FINAL: "gaveta aberta" (visível) */
+.project-container:hover .tech-card.visible {
+  opacity: 1;
+  transform: translate(-160%, -50%) scale(1) translateX(0);
+}
+
+.tech-card .tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  color: var(--bg-color);
+  margin-bottom: 0.4rem;
+}
+
+/* << NOVO: Estilo para os ícones clicáveis >> */
+.tech-card .tech-icons a {
+  color: var(--bg-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tech-card .tech-icons a:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.tech-card .project-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.tech-card .project-links a {
+  color: var(--bg-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.tech-card .project-links a:hover {
+  color: var(--accent-color);
+}
